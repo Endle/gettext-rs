@@ -1,8 +1,8 @@
 #!/bin/sh
 
-set -ex
-
 cc --version
+
+set -ex
 
 cargo test --package gettext-sys warnings --target $TARGET --no-run -vv -- -D warnings
 cargo test --package gettext-rs --target $TARGET --no-run -vv -- -D warnings
