@@ -2,6 +2,8 @@
 
 set -ex
 
+cc --version
+
 cargo test --package gettext-sys warnings --target $TARGET --no-run -vv -- -D warnings
 cargo test --package gettext-rs --target $TARGET --no-run -vv -- -D warnings
 # We don't deny warnings here because we don't care about warnings in auto-generated code.
