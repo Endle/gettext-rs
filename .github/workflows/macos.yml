@@ -19,6 +19,7 @@ jobs:
       fail-fast: false
       matrix:
         use_homebrew: [false, true]
+        clang_version: [11, 12, 13, 14, 15, 16]
 
     steps:
       - name: Install gettext from Homebrew
