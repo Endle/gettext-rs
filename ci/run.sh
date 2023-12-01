@@ -1,5 +1,7 @@
 #!/bin/sh
 
+cc --version
+
 set -ex
 
 cargo test --package gettext-sys warnings --target $TARGET --no-run -vv -- -D warnings

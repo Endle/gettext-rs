@@ -19,8 +19,14 @@ jobs:
       fail-fast: false
       matrix:
         use_homebrew: [false, true]
+        clang_version: [11, 12, 13, 14, 15, 16]
 
     steps:
+      - name: Install LLVM and Clang
+        uses: KyleMayes/install-llvm-action@v1
+        with:
+          version: "${{ matrix.clang_version }}"
+
       - name: Install gettext from Homebrew
         if: ${{ matrix.use_homebrew }}
         run: |
